@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Mah Jong Game by Adamantios Zaras</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" type="text/css"/>
+        <script src="scripts/functions.js" type="text/javascript"></script>
+    </head>
+    <body onload="startTime()">
+        <h1 id="title">Mah Jong Game by Adamantios Zaras</h1>
+        <div id="setupNewGamePanel">
+            <h3>Please select the board size:</h3>
+            <p>
+                <span class="parameters"><label for="rows">Number of rows:</label>
+                    <input id="rows" type="text"/></span>
+               <span class="parameters"><label for="columns">Number of columns:</label>
+                    <input id="columns" type="text"/></span>
+               <span class="parameters"><label for="level">Level:</label>
+                   <select id="level">
+                       <option value="3">Easy</option>
+                       <option value="2">Medium</option>
+                       <option value="1">Hard</option>
+                   </select>
+               </span>
+            </p>
+            <input type="button" onclick="startNewGame()" value="PLAY!" />
+        </div>
+        <div id="gameBoard">
+            <div>
+                <input id="btnCancel" type="button" onclick="cancelTheGame()" value="cancel this game" />
+            </div>
+            <table id="board" align="center">
+            </table>
+            <div id="infoPanel">
+                <span id="clock"></span><span id="timeElapsed"></span><span id="moves"></span>
+            </div>
+        </div>
+    </body>
+</html>
